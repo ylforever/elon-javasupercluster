@@ -1,5 +1,7 @@
 package com.elon.jsc.model;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -7,6 +9,7 @@ import java.io.Serializable;
  *
  * @author elon
  */
+@Data
 public class JKDNode implements Serializable {
 
     private static final long serialVersionUID = -7134737233652288121L;
@@ -52,76 +55,4 @@ public class JKDNode implements Serializable {
     private double y = 0;
 
     private int index = -1;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getParentId() {
-        return parentId;
-    }
-
-    public void setParentId(int parentId) {
-        this.parentId = parentId;
-    }
-
-    public int getZoom() {
-        return zoom;
-    }
-
-    public void setZoom(int zoom) {
-        this.zoom = zoom;
-    }
-
-    public int getNumPoints() {
-        return numPoints;
-    }
-
-    public void setNumPoints(int numPoints) {
-        this.numPoints = numPoints;
-    }
-
-    public Object getProperties() {
-        return properties;
-    }
-
-    public void setProperties(Object properties) {
-        this.properties = properties;
-    }
-
-    public int getOrignalId() {
-        return orignalId;
-    }
-
-    public void setOrignalId(int orignalId) {
-        this.orignalId = orignalId;
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
-    }
 }

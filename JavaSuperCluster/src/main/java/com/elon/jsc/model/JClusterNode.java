@@ -1,5 +1,7 @@
 package com.elon.jsc.model;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -8,6 +10,7 @@ import java.io.Serializable;
  * @author elon
  * @version 1.0 2019-03-15
  */
+@Data
 public class JClusterNode <T extends AggregationModelBase> implements Serializable {
 
     private static final long serialVersionUID = -5358622773451333438L;
@@ -40,52 +43,4 @@ public class JClusterNode <T extends AggregationModelBase> implements Serializab
      * 聚合点为单点时存储应用层的对象模型。
      */
     private T data = null;
-
-    public boolean isCluster() {
-        return isCluster;
-    }
-
-    public void setCluster(boolean cluster) {
-        isCluster = cluster;
-    }
-
-    public int getClusterId() {
-        return clusterId;
-    }
-
-    public void setClusterId(int clusterId) {
-        this.clusterId = clusterId;
-    }
-
-    public int getPointCount() {
-        return pointCount;
-    }
-
-    public void setPointCount(int pointCount) {
-        this.pointCount = pointCount;
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
 }

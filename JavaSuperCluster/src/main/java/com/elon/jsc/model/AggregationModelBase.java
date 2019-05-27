@@ -1,5 +1,6 @@
 package com.elon.jsc.model;
 
+import lombok.Data;
 import java.io.Serializable;
 
 /**
@@ -8,6 +9,7 @@ import java.io.Serializable;
  * @author elon
  * @version 1.0 2019-03-15
  */
+@Data
 public class AggregationModelBase implements Serializable {
 
     private static final long serialVersionUID = 4951392595928922035L;
@@ -26,29 +28,4 @@ public class AggregationModelBase implements Serializable {
      * 维度
      */
     private double latitude = 0;
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public double getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(double longitude) {
-        this.longitude = longitude;
-    }
-
-    public double getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(double latitude) {
-        this.latitude = latitude;
-    }
 }
