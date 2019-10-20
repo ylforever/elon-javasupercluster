@@ -96,22 +96,21 @@ public class JKDSort {
                 while (coords.get(2 * j + depth) > t) {
                     j--;
                 }
-
-                if (Double.compare(coords.get(2 * left + depth), t) == 0){
-                    swapItem(left, j);
-                } else {
-                    j++;
-                    swapItem(j, right);
-                }
-
-                if (j <= k){
-                    left = j + 1;
-                }
-                if (k <= j) {
-                    right = j - 1;
-                }
             }
 
+            if (Double.compare(coords.get(2 * left + depth), t) == 0) {
+                swapItem(left, j);
+            } else {
+                j++;
+                swapItem(j, right);
+            }
+
+            if (j <= k) {
+                left = j + 1;
+            }
+            if (k <= j) {
+                right = j - 1;
+            }
 
         }
     }
